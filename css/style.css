@@ -1,0 +1,59 @@
+@media screen and (max-width:480px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: "Arial", sans-serif;
+        padding: 1.25rem;
+    }
+
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .header__logo__link{
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        align-items: center;
+        font-size: 1.5rem
+    }
+
+    .header__navbar{
+        overflow: hidden;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__navbar__menu{
+        list-style-type: none;
+        background: black;
+        display: none;
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+    }
+
+    .header__navbar__hamburger{
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 0;
+    }
+
+    .header__navbar__hamburger .fa-bars{
+        font-size: 2.25rem;
+        color: #000;
+    }
+}
