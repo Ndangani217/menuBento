@@ -1,58 +1,84 @@
-@media screen and (max-width:480px){
-    *{
+
+.header__navbar__menu {
+  
+}
+
+/* Styles pour les écrans de moins de 480px */
+@media screen and (max-width: 480px) {
+    html, body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    body{
+    body {
         font-family: "Arial", sans-serif;
-        padding: 1.25rem;
     }
 
-    .header{
+    .header {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        width: 100%;
+        align-items: center;
+        padding: 10px;
     }
+/* 
+    .header__navbar {
+        width: 30%;
+        height: 100%;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        background-color: yellow;
+    } */
 
-    .header__logo__link{
+    .header__logo__link {
         text-decoration: none;
         color: #000;
         font-weight: bold;
-        align-items: center;
-        font-size: 1.5rem
+        font-size: 1.5rem;
     }
 
-    .header__navbar{
-        overflow: hidden;
-        background-color: #333;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header__navbar__menu{
-        list-style-type: none;
-        background: black;
-        display: none;
-        overflow: hidden;
-        background-color: #333;
-        position: relative;
-    }
-
-    .header__navbar__hamburger{
+    .header__navbar__hamburger {
         border: none;
         background-color: #fff;
-        cursor: pointer;
         display: block;
-        position: absolute;
-        right: 20px;
-        top: 0;
     }
 
-    .header__navbar__hamburger .fa-bars{
+    .header__navbar__menu {
+        position: fixed;
+        border-radius: 50%;
+        top: 60px;
+        left: 10px;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center;  */
+        background-color:#e0baba;
+        z-index: 1;
+        width: 92vw; 
+        height: 40%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .header__navbar__menu.active {
+        border-radius: 0; 
+        display: flex;
+        color: #000;
+    }
+
+    .header__navbar__menu__item{
+        padding: 14px 16px;
+        display: block;
+    }
+
+    .header__navbar__menu__item__link{
+        font-size: 17px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .header__navbar__hamburger .fa-bars {
         font-size: 2.25rem;
         color: #000;
     }
